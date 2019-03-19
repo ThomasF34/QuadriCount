@@ -30,5 +30,52 @@ class PersonProjetTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
+    func testInit(){
+        let p = Person(fn: "thomas", ln: "falcone")
+        XCTAssertEqual(p.firstname,"thomas")
+        XCTAssertEqual(p.lastname, "falcone")
+    }
+    
+    func testFullname(){
+        let p = Person(fn: "thomas", ln: "falcone")
+        XCTAssertEqual(p.fullname, "thomas falcone")
+    }
+    
+    func testBirthdate(){
+        let p = Person(fn: "thomas", ln: "falcone")
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let date = formatter.date(from: "1996/03/12 07:02")!
+        p.birthdate(birthdate: date)
+        XCTAssertEqual(p.birthdate, date)
+    }
+    
+    func testNilAge(){
+        let p = Person(fn: "thomas", ln: "falcone")
+        XCTAssertNil(p.age)
+    }
+    
+    func testAge(){
+        let p = Person(fn: "thomas", ln: "falcone")
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let date = formatter.date(from: "1996/03/12 07:02")!
+        p.birthdate(birthdate: date)
+        XCTAssertEqual(p.age, 23)
+    }
+    
+    func testEqualsNotEquals(){
+        let p1 = Person(fn: "thomas", ln: "falcone")
+        let p2 = Person(fn: "thomas", ln: "falcone")
+        let p3 = Person(fn: "thomas", ln: "thomas")
+        XCTAssertEqual(p1, p2)
+        XCTAssertNotEqual(p1, p3)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let date = formatter.date(from: "1996/03/12 07:02")!
+        p1.birthdate(birthdate: date)
+        p2.birthdate(birthdate: date.addingTimeInterval(2000))
+        XCTAssertNotEqual(p1, p2)
+    }
 }
