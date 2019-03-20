@@ -4,7 +4,11 @@
 On doit avoir les informations suivantes :
 * Nom
 * Photo
-* Groupes de personne
+* Groupes de personnes
+
+Chaque participant doit être lié à : 
+* Une date de début
+* Une date de fin
 
 On doit pouvoir effectuer les actions suivantes :
 * Ajouter
@@ -15,6 +19,14 @@ On doit pouvoir effectuer les actions suivantes :
 * Connaitre les personnes présentes (avec dates d'entrée de sortie) et avec ordre modulable
 
 ## Gestion des dépenses
+
+On doit avoir les informations suivantes :
+* Nom 
+* Montant 
+* Date de la dépense (Defaut : date du jour) 
+* Payeur 
+* Participants (Groupe de personne) 
+* Photo (facultatif)
 
 On doit pouvoir :
 * Enregistrer une dépense
@@ -46,6 +58,7 @@ Note :
 ## Idée :
 
 * Si plusieurs payeurs -> On réparti automatiquement de manière équilibré (somme/N
-si il y a N payeur)
+si il y a N payeur) Il faut penser à vérifier que la somme des montants pour
+chaque participant est égale au montant globale de la dépense. 
 * Faudrait qu'on test un tricount à plus que deux. Je connais très bien le
   tricount à deux mais pas plus.
