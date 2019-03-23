@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D102E00224529590014F59A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D102DFF224529590014F59A /* CoreDataManager.swift */; };
 		1D5DF4BA2239805F00FA8B23 /* PersonProjetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6C9A97223811F20023F642 /* PersonProjetTests.swift */; };
 		1D6121DD223BA395004B7D62 /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6121DC223BA395004B7D62 /* PersonSet.swift */; };
 		1D6121E0223BA5EC004B7D62 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6C9AB0223812060023F642 /* Person.swift */; };
 		1D6121E2223BA76C004B7D62 /* PersonSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6121E1223BA76C004B7D62 /* PersonSetTests.swift */; };
 		1D6121E3223BA7A2004B7D62 /* PersonSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6121DC223BA395004B7D62 /* PersonSet.swift */; };
 		1D6121E8223BBF39004B7D62 /* ItPersonSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6121E7223BBF39004B7D62 /* ItPersonSetTests.swift */; };
-		1D6121EA223BC7CF004B7D62 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6121E9223BC7CF004B7D62 /* PersonViewController.swift */; };
-		1D6121EB223BC7CF004B7D62 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6121E9223BC7CF004B7D62 /* PersonViewController.swift */; };
+		1D6121EA223BC7CF004B7D62 /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6121E9223BC7CF004B7D62 /* PersonTableViewController.swift */; };
+		1D6121EB223BC7CF004B7D62 /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6121E9223BC7CF004B7D62 /* PersonTableViewController.swift */; };
 		1D6121ED223BF157004B7D62 /* StudentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6121EC223BF157004B7D62 /* StudentInfoViewController.swift */; };
 		1D6121EE223BF157004B7D62 /* StudentInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6121EC223BF157004B7D62 /* StudentInfoViewController.swift */; };
 		1D6C9A80223811F10023F642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6C9A7F223811F10023F642 /* AppDelegate.swift */; };
@@ -27,6 +28,8 @@
 		1D6C9AB1223812060023F642 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6C9AB0223812060023F642 /* Person.swift */; };
 		1DA9121022414EA700D131DA /* PersonSetViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9120F22414EA700D131DA /* PersonSetViewModelDelegate.swift */; };
 		1DBE66292241495C00232105 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBE66282241495C00232105 /* AddPersonViewController.swift */; };
+		1DF9EAAC22453637001FA3E5 /* PersonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9EAAB22453637001FA3E5 /* PersonDAO.swift */; };
+		1DF9EAAE2245383D001FA3E5 /* PersonFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF9EAAD2245383D001FA3E5 /* PersonFetchResultController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D102DFF224529590014F59A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1D6121DC223BA395004B7D62 /* PersonSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSet.swift; sourceTree = "<group>"; };
 		1D6121E1223BA76C004B7D62 /* PersonSetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSetTests.swift; sourceTree = "<group>"; };
 		1D6121E7223BBF39004B7D62 /* ItPersonSetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItPersonSetTests.swift; sourceTree = "<group>"; };
-		1D6121E9223BC7CF004B7D62 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
+		1D6121E9223BC7CF004B7D62 /* PersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
 		1D6121EC223BF157004B7D62 /* StudentInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoViewController.swift; sourceTree = "<group>"; };
 		1D6C9A7C223811F10023F642 /* PersonProjet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonProjet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6C9A7F223811F10023F642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 		1D6C9AB0223812060023F642 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		1DA9120F22414EA700D131DA /* PersonSetViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonSetViewModelDelegate.swift; sourceTree = "<group>"; };
 		1DBE66282241495C00232105 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
+		1DF9EAAB22453637001FA3E5 /* PersonDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDAO.swift; sourceTree = "<group>"; };
+		1DF9EAAD2245383D001FA3E5 /* PersonFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFetchResultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D102DFE224529380014F59A /* Persist */ = {
+			isa = PBXGroup;
+			children = (
+				1D102DFF224529590014F59A /* CoreDataManager.swift */,
+				1DF9EAAB22453637001FA3E5 /* PersonDAO.swift */,
+				1DF9EAAD2245383D001FA3E5 /* PersonFetchResultController.swift */,
+			);
+			path = Persist;
+			sourceTree = "<group>";
+		};
 		1D6C9A73223811F10023F642 = {
 			isa = PBXGroup;
 			children = (
@@ -119,11 +135,12 @@
 		1D6C9A7E223811F10023F642 /* PersonProjet */ = {
 			isa = PBXGroup;
 			children = (
+				1D102DFE224529380014F59A /* Persist */,
 				1DBE66272241493C00232105 /* Models */,
 				1DBE66262241492B00232105 /* Controllers */,
 				1D6C9A7F223811F10023F642 /* AppDelegate.swift */,
-				1D6C9A83223811F10023F642 /* Main.storyboard */,
 				1D6C9A89223811F20023F642 /* Assets.xcassets */,
+				1D6C9A83223811F10023F642 /* Main.storyboard */,
 				1D6C9A8B223811F20023F642 /* LaunchScreen.storyboard */,
 				1D6C9A8E223811F20023F642 /* Info.plist */,
 				1D6C9A86223811F10023F642 /* PersonProjet.xcdatamodeld */,
@@ -156,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6C9A81223811F10023F642 /* ViewController.swift */,
-				1D6121E9223BC7CF004B7D62 /* PersonViewController.swift */,
+				1D6121E9223BC7CF004B7D62 /* PersonTableViewController.swift */,
 				1D6121EC223BF157004B7D62 /* StudentInfoViewController.swift */,
 				1DBE66282241495C00232105 /* AddPersonViewController.swift */,
 			);
@@ -304,13 +321,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D6121DD223BA395004B7D62 /* PersonSet.swift in Sources */,
-				1D6121EA223BC7CF004B7D62 /* PersonViewController.swift in Sources */,
+				1D6121EA223BC7CF004B7D62 /* PersonTableViewController.swift in Sources */,
 				1D6C9A82223811F10023F642 /* ViewController.swift in Sources */,
+				1DF9EAAC22453637001FA3E5 /* PersonDAO.swift in Sources */,
 				1D6C9A88223811F10023F642 /* PersonProjet.xcdatamodeld in Sources */,
 				1D6C9AB1223812060023F642 /* Person.swift in Sources */,
 				1D6121ED223BF157004B7D62 /* StudentInfoViewController.swift in Sources */,
 				1D6C9A80223811F10023F642 /* AppDelegate.swift in Sources */,
+				1DF9EAAE2245383D001FA3E5 /* PersonFetchResultController.swift in Sources */,
 				1DBE66292241495C00232105 /* AddPersonViewController.swift in Sources */,
+				1D102E00224529590014F59A /* CoreDataManager.swift in Sources */,
 				1DA9121022414EA700D131DA /* PersonSetViewModelDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,7 +353,7 @@
 			files = (
 				1D6C9AA3223811F20023F642 /* PersonProjetUITests.swift in Sources */,
 				1D6121EE223BF157004B7D62 /* StudentInfoViewController.swift in Sources */,
-				1D6121EB223BC7CF004B7D62 /* PersonViewController.swift in Sources */,
+				1D6121EB223BC7CF004B7D62 /* PersonTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

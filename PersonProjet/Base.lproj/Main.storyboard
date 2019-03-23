@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="personCell" textLabel="C4t-we-fQh" detailTextLabel="WmD-Et-ZoK" style="IBUITableViewCellStyleValue1" id="ee2-ZS-Pgx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="personCell" textLabel="C4t-we-fQh" detailTextLabel="WmD-Et-ZoK" style="IBUITableViewCellStyleValue1" id="ee2-ZS-Pgx">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ee2-ZS-Pgx" id="kru-El-a9W">
@@ -53,10 +53,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="0ud-sE-lnG" id="BSC-Ec-KX3"/>
-                                    <outlet property="delegate" destination="0ud-sE-lnG" id="kYe-N0-KSA"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -77,15 +73,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="studentTableView" destination="z8A-Qh-ypx" id="aBI-iv-rjr"/>
-                        <outlet property="studentTableViewController" destination="0ud-sE-lnG" id="uAd-vd-i6S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="0ud-sE-lnG" customClass="PersonViewController" customModule="PersonProjet" customModuleProvider="target">
-                    <connections>
-                        <outlet property="table" destination="z8A-Qh-ypx" id="o8n-ft-PrL"/>
-                    </connections>
-                </customObject>
+                <customObject id="0ud-sE-lnG"/>
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
@@ -138,6 +129,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="zax-Dz-PnL"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Ajouter"/>
                                 <connections>
                                     <segue destination="JFk-xS-Lf1" kind="unwind" identifier="addPersonSegue" unwindAction="unwindToMainViewWithSegue:" id="JtX-CH-8iR"/>

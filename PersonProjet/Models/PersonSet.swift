@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 public class PersonSet {
     fileprivate var content : [Person]
@@ -142,13 +143,10 @@ public class ItPersonSet {
 
 public class ViewModelPersonTable{
     
-    public var listOfPerson : PersonSet
-    public var delegate : PersonSetViewModelDelegate?
-    public convenience init(withDelegate: PersonSetViewModelDelegate){
-        self.init()
-    }
+    public var personFetched : NSFetchedResultsController<Person>
+    public var delegate : PersonSetViewModelDelegate? = nil
     
-    public init(){
+   /* public init(){
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
@@ -160,9 +158,13 @@ public class ViewModelPersonTable{
     
     public init(list : PersonSet){
         self.listOfPerson = list
+    }*/
+    
+    public init(data : NSFetchedResultsController<Person>){
+        self.personFetched = data
     }
     
-    private func randomFill(){
+    /*private func randomFill(){
         let listFirstname = ["Bernard", "Thomas" , "Lucas", "Alice", "Sylvie", "Cathy", "Léa", "Françoise" , "Philippe"]
         let listLastname = ["Falcone", "Dupont" , "Goncalves", "Mayeur", "Mitre", "Robert"]
         
@@ -173,27 +175,29 @@ public class ViewModelPersonTable{
                 self.listOfPerson.add(person: Person(fn: listFirstname.randomElement()!, ln: listLastname.randomElement()!))
             }
         }
-    }
+    }*/
     
-    private func deterministFill(){
+    /*private func deterministFill(){
         self.listOfPerson.add(person: Person(fn: "Alice", ln: "Burette"))
         self.listOfPerson.add(person: Person(fn: "Thomas", ln: "Falcone"))
         self.listOfPerson.add(person: Person(fn: "Lucas", ln: "Gonçalves"))
         self.listOfPerson.add(person: Person(fn: "Yannick", ln: "Mayeur"))
-    }
+    }*/
     
     public var count : Int {
-        return listOfPerson.count
+        return self.personFetched.fetchedObjects?.count ?? 0
     }
     
-    public func get(personAt: Int) -> Person {
-        return self.listOfPerson.content[personAt]
+    public func get(personAt: Int) -> Person? {
+        return self.personFetched.object(at: IndexPath(row: personAt, section: 0))
     }
     
     public func add(person: Person){
-        self.listOfPerson.add(person: person)
-        guard ( self.delegate != nil ) else { return }
-        self.delegate?.personAdded()
+        //TODO On ne vérifie pas qu'un utilisateur existe déjà
+        if let indexPath = self.personFetched.indexPath(forObject: person) {
+            guard ( self.delegate != nil ) else { return }
+            self.delegate?.personAdded()
+        }
     }
     
 }

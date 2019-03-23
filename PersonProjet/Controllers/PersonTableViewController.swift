@@ -9,14 +9,18 @@
 import Foundation
 import UIKit
 
-class PersonViewController : NSObject, UITableViewDataSource, UITableViewDelegate, PersonSetViewModelDelegate{
+class PersonTableViewController : NSObject, UITableViewDataSource, UITableViewDelegate, PersonSetViewModelDelegate{
     
-    @IBOutlet weak var table: UITableView!
+    var table : UITableView!
     var data : ViewModelPersonTable
+    let fetchResultController : PersonFetchResultController
     
-    override init(){
-        self.data = ViewModelPersonTable()
+    init(tableView : UITableView){
+        self.table = tableView
+        self.fetchResultController = PersonFetchResultController(view: self.table)
+        self.data = ViewModelPersonTable(data : self.fetchResultController.personFetched)
         super.init()
+        self.table.dataSource = self
         data.delegate = self
     }
     
@@ -25,9 +29,10 @@ class PersonViewController : NSObject, UITableViewDataSource, UITableViewDelegat
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell")!;
-        cell.textLabel?.text = self.data.get(personAt: indexPath.row).fullname
-       // cell.textLabel?. = self.set.count[indexPath.row].birthdate
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
+        if let person = self.data.get(personAt: indexPath.row){
+            cell.textLabel?.text = person.fullname
+        }
         return cell
     }
     
@@ -36,7 +41,7 @@ class PersonViewController : NSObject, UITableViewDataSource, UITableViewDelegat
     }
     
     //Pas ouf pas ouf. Faudrait lier VC à VM
-    func get(personAt: Int) -> Person {
+    func get(personAt: Int) -> Person? {
         return self.data.get(personAt: personAt);
     }
     
